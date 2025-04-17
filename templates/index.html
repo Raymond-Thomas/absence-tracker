@@ -2,9 +2,8 @@
 <html>
     <head><title>Absence Tracker</title></head>
 <body>
-    <center>
-    <h1>Leave Requests</h1></center>
-    <a href="/submit">Submit New Request</a>
+   <center><h1>Leave Requests</h1></center>
+   <center><a href="/submit">Submit New Request</a></center>
     <ul>
         {% for req in requests %}
         <li>{{ req.name }} | {{ req.type }} | {{ req.start }} - {{ req.end }} | {{ req.status }}</li>
