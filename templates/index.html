@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head><title>Absence Tracker</title></head>
+<body>
+    <h1>Leave Requests</h1>
+    <a href="/submit">Submit New Request</a>
+    <ul>
+        {% for req in requests %}
+        <li>{{ req.name }} | {{ req.type }} | {{ req.start }} - {{ req.end }} | {{ req.status }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
