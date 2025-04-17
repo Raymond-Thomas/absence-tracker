@@ -1,24 +1,36 @@
 from flask import Flask, render_template, request, redirect
+from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 
 app = Flask(__name__)
-leave_requests = []
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///leave_requests.db'
+db = SQLAlchemy(app)
+
+class LeaveRequest(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(100))
+    type = db.Column(db.String(50))
+    start = db.Column(db.String(20))
+    end = db.Column(db.String(20))
+    status = db.Column(db.String(20), default='Pending')
+    submitted = db.Column(db.DateTime, default=datetime.utcnow)
 
 @app.route('/')
 def index():
-    return render_template('index.html', requests=leave_requests)
+    requests = LeaveRequest.query.all()
+    return render_template('index.html', requests=requests)
 
 @app.route('/submit', methods=['GET', 'POST'])
 def submit():
     if request.method == 'POST':
-        leave_requests.append({
-            'name': request.form['name'],
-            'type': request.form['type'],
-            'start': request.form['start'],
-            'end': request.form['end'],
-            'status': 'Pending',
-            'submitted': datetime.now().strftime("%Y-%m-%d %H:%M")
-        })
+        new_request = LeaveRequest(
+            name=request.form['name'],
+            type=request.form['type'],
+            start=request.form['start'],
+            end=request.form['end']
+        )
+        db.session.add(new_request)
+        db.session.commit()
         return redirect('/')
     return render_template('submit.html')
 
