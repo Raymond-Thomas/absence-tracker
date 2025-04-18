@@ -35,5 +35,3 @@ This is a simple Flask-based web application that allows users to submit absence
 - Understood the structure of Flask apps and how templates are rendered.
 - Gained experience using cloud infrastructure to host web applications publicly.
 
-## 📁 Project Structure
-
