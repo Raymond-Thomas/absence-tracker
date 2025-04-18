@@ -1,13 +1,38 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Submission Successful</title>
+    <title>Leave Submitted</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f4f6f9;
+            padding: 40px;
+            text-align: center;
+            color: #333;
+        }
+        .card {
+            background: white;
+            display: inline-block;
+            padding: 30px 40px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #4a90e2;
+        }
+        p {
+            margin: 10px 0;
+            font-size: 18px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Leave Request Received</h1>
-    <p><strong>Name:</strong> {{ name }}</p>
-    <p><strong>Type of Leave:</strong> {{ leave_type }}</p>
-    <p><strong>Start Date:</strong> {{ start }}</p>
-    <p><strong>End Date:</strong> {{ end }}</p>
+    <div class="card">
+        <h1>Leave Request Submitted</h1>
+        <p><strong>Name:</strong> {{ name }}</p>
+        <p><strong>Type:</strong> {{ leave_type }}</p>
+        <p><strong>Start:</strong> {{ start }}</p>
+        <p><strong>End:</strong> {{ end }}</p>
+    </div>
 </body>
 </html>
