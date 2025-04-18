@@ -8,24 +8,24 @@ This is a simple Flask-based web application that allows users to submit absence
 ## 🚀 Technologies Used
 
 - **Python & Flask** – Lightweight backend built with Python and Flask for routing and handling form data.
-- **HTML & CSS** – Frontend templates using `index.html` and `submit.html`, located in the `templates` folder.
+- **HTML & CSS** – Frontend templates using index.html and submit.html, located in the templates folder.
 - **GitHub** – All project code is stored in a public GitHub repository, used for version control and deployment.
 - **Azure App Service** – The live application is hosted on Microsoft Azure using App Service and deployed automatically via GitHub Actions.
 
 ## 🛠️ How It Was Built
 
 1. **Local Development**
-   - Created a Flask app with form routing and rendering using `render_template()`.
+   - Created a Flask app with form routing and rendering using render_template().
    - Styled the pages with embedded CSS for a polished and clean UI.
 
 2. **Version Control with GitHub**
    - Created a public GitHub repository to host the project.
-   - Added all files (`app.py`, HTML templates, requirements.txt) and pushed to `main` branch.
+   - Added all files (app.py, HTML templates, requirements.txt) and pushed to main branch.
 
 3. **Deployment with Azure**
    - Created a new Azure Web App via the Azure Portal.
    - Connected the Azure App Service to my GitHub repository.
-   - Enabled GitHub Actions for continuous deployment on new commits to `main`.
+   - Enabled GitHub Actions for continuous deployment on new commits to main.
 
 4. **Live Deployment**
    - Azure automatically pulls and builds the app when changes are committed.
