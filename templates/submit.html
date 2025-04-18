@@ -48,25 +48,10 @@
     </style>
 </head>
 <body>
-    <h1>Submit a Leave Request</h1>
-    <form method="POST">
-        <label>Name:</label>
-        <input type="text" name="name" required>
-
-        <label>Type of Leave:</label>
-        <select name="type" required>
-            <option value="Vacation">Vacation</option>
-            <option value="Sick">Sick</option>
-            <option value="Personal">Personal</option>
-        </select>
-
-        <label>Start Date:</label>
-        <input type="date" name="start" required>
-
-        <label>End Date:</label>
-        <input type="date" name="end" required>
-
-        <button type="submit">Submit Request</button>
-    </form>
+    <h1>Leave Request Received</h1>
+    <p><strong>Name:</strong> {{ name }}</p>
+    <p><strong>Type of Leave:</strong> {{ leave_type }}</p>
+    <p><strong>Start Date:</strong> {{ start }}</p>
+    <p><strong>End Date:</strong> {{ end }}</p>
 </body>
 </html>
