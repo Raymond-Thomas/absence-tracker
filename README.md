@@ -2,6 +2,9 @@
 
 This is a simple Flask-based web application that allows users to submit absence requests via a styled HTML form. The project was built as part of my portfolio to demonstrate modern web deployment practices using **Azure App Service** and **GitHub integration**.
 
+[![Deploy to Azure](https://img.shields.io/badge/Deployed%20on-Azure-blue?logo=microsoftazure)](https://absence-tracker-raymond-avhrawc8ddhcdehc.centralus-01.azurewebsites.net/)
+
+
 ## 🚀 Technologies Used
 
 - **Python & Flask** – Lightweight backend built with Python and Flask for routing and handling form data.
