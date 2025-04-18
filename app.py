@@ -9,7 +9,6 @@ def home():
 
 # Route for the submission page
 @app.route('/submit', methods=['POST'])
-@app.route('/submit', methods=['POST'])
 def submit():
     name = request.form.get('name')
     leave_type = request.form.get('type')
