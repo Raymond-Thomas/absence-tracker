@@ -1,14 +1,21 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
+# Route for the home page
 @app.route('/')
 def home():
-    return render_template("index.html")
+    return render_template('index.html')
 
-@app.route('/submit')
+# Route for the submission page
+@app.route('/submit', methods=['POST'])
 def submit():
-    return render_template("submit.html")
+    name = request.form.get('name')
+    reason = request.form.get('reason')
+    date = request.form.get('date')
+    return render_template('submit.html', name=name, reason=reason, date=date)
 
-if __name__ == "__main__":
-    app.run()
+if __name__ == '__main__':
+    app.run(debug=True)
+
+
