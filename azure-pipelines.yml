@@ -10,8 +10,8 @@ pool:
   vmImage: ubuntu-latest
 
 variables:
-  azureSubscription: '<YOUR-SERVICE-CONNECTION-NAME>'
-  appName: '<YOUR-APP-SERVICE-NAME>'
+  azureSubscription: 'azure-absence-connection'
+  appName: 'absence-tracker-raymond'
   packageDirectory: '$(System.DefaultWorkingDirectory)'
 
 steps:
