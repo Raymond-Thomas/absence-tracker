@@ -36,6 +36,17 @@ A Flask-based Absence Tracker web app with full CI/CD pipeline using Azure DevOp
    - Azure automatically pulls and builds the app when changes are committed.
    - Accessible via the Azure-provided domain:  
      (https://absence-tracker-raymond-avhrawc8ddhcdehc.centralus-01.azurewebsites.net/)
+     
+5. ## Deployment
+
+This app is live and deployed on [Azure App Service](https://absence-tracker-raymond.azurewebsites.net).  
+CI/CD is fully configured with Azure DevOps and GitHub.
+
+The pipeline is triggered automatically on every push to the `main` branch, installing dependencies and deploying to production.
+
+⚠️ *Pipeline execution is currently pending free-tier approval from Microsoft. Once approved, updates will deploy automatically.*
+
+
 
 ## 💡 Lessons & Takeaways
 
