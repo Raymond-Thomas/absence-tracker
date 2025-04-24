@@ -4,6 +4,10 @@ This is a simple Flask-based web application that allows users to submit absence
 
 [![Deploy to Azure](https://img.shields.io/badge/Deployed%20on-Azure-blue?logo=microsoftazure)](https://absence-tracker-raymond-avhrawc8ddhcdehc.centralus-01.azurewebsites.net/)
 
+[![Build Status](https://dev.azure.com/...)](https://dev.azure.com/...)
+
+A Flask-based Absence Tracker web app with full CI/CD pipeline using Azure DevOps and GitHub.
+
 
 ## 🚀 Technologies Used
 
